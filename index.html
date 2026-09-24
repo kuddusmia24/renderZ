@@ -1,0 +1,1967 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bethune-Cookman University | Enter to Learn. Depart to Serve.</title>
+
+    <meta name="description"
+          content="Bethune-Cookman University — academics, admissions, student life, campus experiences and opportunities for tomorrow's leaders.">
+
+    <style>
+        :root {
+            --maroon: #68152b;
+            --maroon-dark: #470d1c;
+            --gold: #d6a23a;
+            --gold-light: #f3d58b;
+            --cream: #faf7f1;
+            --dark: #171519;
+            --text: #3d3a3d;
+            --muted: #777177;
+            --white: #ffffff;
+            --border: #e7e0d9;
+            --max-width: 1240px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                Inter,
+                "Segoe UI",
+                Roboto,
+                Arial,
+                sans-serif;
+            color: var(--text);
+            background: #fff;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button {
+            font: inherit;
+        }
+
+        .container {
+            width: min(calc(100% - 40px), var(--max-width));
+            margin: 0 auto;
+        }
+
+        /* ========================================
+           TOP BAR
+        ======================================== */
+
+        .topbar {
+            background: var(--maroon-dark);
+            color: #fff;
+            font-size: 13px;
+        }
+
+        .topbar-inner {
+            min-height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 25px;
+        }
+
+        .topbar a {
+            opacity: .9;
+            transition: .2s;
+        }
+
+        .topbar a:hover {
+            color: var(--gold-light);
+            opacity: 1;
+        }
+
+        /* ========================================
+           HEADER
+        ======================================== */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,.97);
+            border-bottom: 1px solid var(--border);
+            backdrop-filter: blur(12px);
+        }
+
+        .navbar {
+            min-height: 88px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            min-width: 230px;
+        }
+
+        .brand-mark {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background:
+                radial-gradient(
+                    circle at center,
+                    var(--gold) 0 22%,
+                    var(--maroon) 23% 58%,
+                    var(--gold) 59% 64%,
+                    var(--maroon) 65%
+                );
+            position: relative;
+            box-shadow: 0 3px 12px rgba(0,0,0,.12);
+        }
+
+        .brand-mark::after {
+            content: "B";
+            position: absolute;
+            inset: 0;
+            display: grid;
+            place-items: center;
+            color: #fff;
+            font-family: Georgia, serif;
+            font-weight: bold;
+            font-size: 25px;
+        }
+
+        .brand-text {
+            color: var(--maroon);
+            font-family: Georgia, "Times New Roman", serif;
+            font-weight: 700;
+            line-height: 1.05;
+            font-size: 17px;
+        }
+
+        .brand-text span {
+            display: block;
+            color: #544d51;
+            font-family: Arial, sans-serif;
+            font-size: 9px;
+            letter-spacing: 2px;
+            margin-top: 4px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 700;
+            color: #342d31;
+            position: relative;
+            padding: 32px 0;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 23px;
+            height: 2px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: .2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--maroon);
+        }
+
+        .nav-links a:hover::after {
+            transform: scaleX(1);
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .apply-small {
+            padding: 12px 18px;
+            background: var(--maroon);
+            color: #fff;
+            font-size: 13px;
+            font-weight: 800;
+            border: 0;
+            cursor: pointer;
+        }
+
+        .apply-small:hover {
+            background: var(--maroon-dark);
+        }
+
+        .menu-btn {
+            display: none;
+            width: 43px;
+            height: 43px;
+            border: 1px solid var(--border);
+            background: #fff;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        /* ========================================
+           HERO
+        ======================================== */
+
+        .hero {
+            min-height: 660px;
+            position: relative;
+            overflow: hidden;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(52,7,20,.97) 0%,
+                    rgba(84,12,33,.88) 42%,
+                    rgba(100,23,46,.48) 72%,
+                    rgba(0,0,0,.15) 100%
+                ),
+                linear-gradient(
+                    135deg,
+                    #4b0c20,
+                    #9b3c50 55%,
+                    #d29b38
+                );
+            display: flex;
+            align-items: center;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 720px;
+            height: 720px;
+            right: -250px;
+            top: -170px;
+            border: 1px solid rgba(255,255,255,.17);
+            border-radius: 50%;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 480px;
+            height: 480px;
+            right: -90px;
+            top: 40px;
+            border: 1px solid rgba(255,255,255,.13);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 720px;
+            color: #fff;
+            padding: 100px 0;
+        }
+
+        .hero-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--gold-light);
+            font-size: 13px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .hero-kicker::before {
+            content: "";
+            width: 40px;
+            height: 2px;
+            background: var(--gold);
+        }
+
+        .hero h1 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(48px, 6vw, 78px);
+            line-height: 1.02;
+            letter-spacing: -2px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: var(--gold-light);
+        }
+
+        .hero p {
+            max-width: 650px;
+            color: #f8edf0;
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 34px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 13px;
+        }
+
+        .btn {
+            min-height: 52px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 25px;
+            border: 1px solid transparent;
+            font-size: 14px;
+            font-weight: 800;
+            cursor: pointer;
+            transition: .2s;
+        }
+
+        .btn-gold {
+            background: var(--gold);
+            color: #261b0d;
+        }
+
+        .btn-gold:hover {
+            background: #e4b85c;
+            transform: translateY(-2px);
+        }
+
+        .btn-white {
+            color: #fff;
+            border-color: rgba(255,255,255,.6);
+            background: transparent;
+        }
+
+        .btn-white:hover {
+            background: rgba(255,255,255,.1);
+        }
+
+        /* ========================================
+           QUICK LINKS
+        ======================================== */
+
+        .quick-links {
+            margin-top: -45px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .quick-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            background: #fff;
+            box-shadow: 0 18px 45px rgba(45,22,30,.13);
+        }
+
+        .quick-item {
+            min-height: 120px;
+            padding: 25px;
+            border-right: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: .2s;
+        }
+
+        .quick-item:last-child {
+            border-right: 0;
+        }
+
+        .quick-item:hover {
+            background: var(--cream);
+        }
+
+        .quick-item strong {
+            color: var(--maroon);
+            font-family: Georgia, serif;
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+
+        .quick-item span {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* ========================================
+           WELCOME
+        ======================================== */
+
+        .welcome {
+            padding: 110px 0;
+        }
+
+        .welcome-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .eyebrow {
+            color: var(--maroon);
+            text-transform: uppercase;
+            letter-spacing: 1.8px;
+            font-size: 12px;
+            font-weight: 900;
+            margin-bottom: 15px;
+        }
+
+        .welcome h2,
+        .section-title {
+            font-family: Georgia, "Times New Roman", serif;
+            color: var(--dark);
+            font-size: clamp(35px, 4vw, 53px);
+            line-height: 1.12;
+            letter-spacing: -1.5px;
+            margin-bottom: 20px;
+        }
+
+        .welcome p {
+            color: var(--muted);
+            font-size: 17px;
+            line-height: 1.85;
+            margin-bottom: 20px;
+        }
+
+        .quote {
+            margin-top: 30px;
+            padding: 22px 25px;
+            border-left: 4px solid var(--gold);
+            background: var(--cream);
+            font-family: Georgia, serif;
+            font-size: 19px;
+            color: #4b3b3f;
+        }
+
+        .quote small {
+            display: block;
+            margin-top: 10px;
+            font-family: Arial, sans-serif;
+            color: var(--maroon);
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .campus-visual {
+            min-height: 470px;
+            position: relative;
+            overflow: hidden;
+            background:
+                linear-gradient(
+                    145deg,
+                    #5b1028,
+                    #a44756 52%,
+                    #d8a544
+                );
+        }
+
+        .campus-visual::before {
+            content: "";
+            position: absolute;
+            width: 360px;
+            height: 360px;
+            border: 50px solid rgba(255,255,255,.16);
+            border-radius: 50%;
+            left: -120px;
+            top: 45px;
+        }
+
+        .campus-visual::after {
+            content: "ENTER TO\nLEARN.\A\A DEPART TO\nSERVE.";
+            white-space: pre;
+            position: absolute;
+            right: 35px;
+            bottom: 35px;
+            color: #fff;
+            font-family: Georgia, serif;
+            font-size: 34px;
+            font-weight: bold;
+            line-height: 1;
+            text-align: right;
+        }
+
+        /* ========================================
+           ACADEMICS
+        ======================================== */
+
+        .academics {
+            background: var(--cream);
+            padding: 105px 0;
+        }
+
+        .section-heading {
+            max-width: 700px;
+            margin-bottom: 50px;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+            font-size: 17px;
+            line-height: 1.75;
+        }
+
+        .academic-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .academic-card {
+            background: #fff;
+            padding: 30px 25px;
+            border: 1px solid var(--border);
+            min-height: 250px;
+            transition: .25s;
+        }
+
+        .academic-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(61,31,39,.09);
+            border-color: #d6bd83;
+        }
+
+        .academic-icon {
+            width: 48px;
+            height: 48px;
+            display: grid;
+            place-items: center;
+            background: var(--maroon);
+            color: var(--gold-light);
+            font-size: 20px;
+            margin-bottom: 22px;
+        }
+
+        .academic-card h3 {
+            color: var(--maroon);
+            font-family: Georgia, serif;
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .academic-card p {
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .academic-card a {
+            display: inline-block;
+            margin-top: 18px;
+            color: var(--maroon);
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        /* ========================================
+           STATS
+        ======================================== */
+
+        .stats {
+            background: var(--maroon);
+            color: #fff;
+            padding: 70px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .stat {
+            text-align: center;
+            padding: 10px 25px;
+            border-right: 1px solid rgba(255,255,255,.15);
+        }
+
+        .stat:last-child {
+            border-right: 0;
+        }
+
+        .stat strong {
+            display: block;
+            color: var(--gold-light);
+            font-family: Georgia, serif;
+            font-size: 48px;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .stat span {
+            color: #eadce0;
+            font-size: 13px;
+        }
+
+        /* ========================================
+           NEWS
+        ======================================== */
+
+        .news {
+            padding: 110px 0;
+        }
+
+        .news-header {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 45px;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: 1.25fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .news-card {
+            border: 1px solid var(--border);
+            background: #fff;
+            overflow: hidden;
+            transition: .2s;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,.08);
+        }
+
+        .news-image {
+            height: 190px;
+            background:
+                linear-gradient(
+                    135deg,
+                    #521025,
+                    #a84b59 60%,
+                    #d2a03e
+                );
+            position: relative;
+        }
+
+        .news-card:first-child .news-image {
+            height: 240px;
+        }
+
+        .news-image span {
+            position: absolute;
+            left: 20px;
+            bottom: 18px;
+            color: #fff;
+            font-family: Georgia, serif;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .news-body {
+            padding: 25px;
+        }
+
+        .news-date {
+            color: var(--maroon);
+            font-size: 11px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .news-body h3 {
+            color: var(--dark);
+            font-family: Georgia, serif;
+            font-size: 21px;
+            line-height: 1.3;
+            margin: 10px 0;
+        }
+
+        .news-body p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 17px;
+            color: var(--maroon);
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        /* ========================================
+           EVENTS
+        ======================================== */
+
+        .events {
+            background: #f7f3ed;
+            padding: 100px 0;
+        }
+
+        .event-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .event-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .event {
+            display: grid;
+            grid-template-columns: 75px 1fr auto;
+            gap: 20px;
+            align-items: center;
+            background: #fff;
+            border: 1px solid var(--border);
+            padding: 20px;
+        }
+
+        .event-date {
+            text-align: center;
+            border-right: 1px solid var(--border);
+            padding-right: 15px;
+        }
+
+        .event-date strong {
+            display: block;
+            color: var(--maroon);
+            font-family: Georgia, serif;
+            font-size: 27px;
+            line-height: 1;
+        }
+
+        .event-date span {
+            color: var(--muted);
+            font-size: 11px;
+            text-transform: uppercase;
+        }
+
+        .event h3 {
+            font-size: 16px;
+            color: var(--dark);
+            margin-bottom: 4px;
+        }
+
+        .event p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .event-arrow {
+            color: var(--maroon);
+            font-size: 20px;
+        }
+
+        /* ========================================
+           CTA
+        ======================================== */
+
+        .cta {
+            background:
+                linear-gradient(
+                    110deg,
+                    var(--maroon-dark),
+                    var(--maroon)
+                );
+            padding: 90px 0;
+            color: #fff;
+        }
+
+        .cta-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .cta h2 {
+            font-family: Georgia, serif;
+            font-size: clamp(34px, 4vw, 52px);
+            line-height: 1.1;
+            margin-bottom: 14px;
+        }
+
+        .cta p {
+            color: #eadce0;
+            max-width: 650px;
+            font-size: 16px;
+        }
+
+        /* ========================================
+           FOOTER
+        ======================================== */
+
+        footer {
+            background: #171316;
+            color: #fff;
+            padding-top: 70px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr repeat(3, 1fr);
+            gap: 50px;
+            padding-bottom: 60px;
+        }
+
+        .footer-brand h3 {
+            font-family: Georgia, serif;
+            color: var(--gold-light);
+            font-size: 23px;
+            margin-bottom: 15px;
+        }
+
+        .footer-brand p {
+            color: #aaa1a5;
+            max-width: 350px;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .footer-title {
+            color: var(--gold-light);
+            font-size: 12px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin: 10px 0;
+        }
+
+        .footer-links a {
+            color: #aaa1a5;
+            font-size: 14px;
+            transition: .2s;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,.1);
+            padding: 23px 0;
+            color: #81797d;
+            font-size: 12px;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        /* ========================================
+           MOBILE
+        ======================================== */
+
+        @media (max-width: 1000px) {
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                left: 20px;
+                right: 20px;
+                top: 88px;
+                background: #fff;
+                border: 1px solid var(--border);
+                box-shadow: 0 20px 40px rgba(0,0,0,.12);
+                padding: 20px;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                display: block;
+                width: 100%;
+                padding: 14px 5px;
+            }
+
+            .nav-links a::after {
+                display: none;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .apply-small {
+                display: none;
+            }
+
+            .academic-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .news-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .news-card:first-child {
+                grid-column: 1 / -1;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            .container {
+                width: min(calc(100% - 28px), var(--max-width));
+            }
+
+            .topbar-inner {
+                justify-content: center;
+            }
+
+            .topbar a:nth-child(n+3) {
+                display: none;
+            }
+
+            .navbar {
+                min-height: 72px;
+            }
+
+            .nav-links {
+                top: 72px;
+                left: 14px;
+                right: 14px;
+            }
+
+            .brand {
+                min-width: auto;
+            }
+
+            .brand-text {
+                font-size: 14px;
+            }
+
+            .brand-mark {
+                width: 45px;
+                height: 45px;
+            }
+
+            .hero {
+                min-height: 600px;
+            }
+
+            .hero-content {
+                padding: 80px 0;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .quick-links {
+                margin-top: 0;
+            }
+
+            .quick-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .quick-item {
+                border-bottom: 1px solid var(--border);
+            }
+
+            .quick-item:nth-child(2) {
+                border-right: 0;
+            }
+
+            .welcome {
+                padding: 75px 0;
+            }
+
+            .welcome-grid,
+            .event-grid {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
+
+            .academic-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .academics,
+            .news,
+            .events {
+                padding: 75px 0;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+                row-gap: 30px;
+            }
+
+            .stat:nth-child(2) {
+                border-right: 0;
+            }
+
+            .stat:nth-child(3) {
+                border-right: 1px solid rgba(255,255,255,.15);
+            }
+
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .news-card:first-child {
+                grid-column: auto;
+            }
+
+            .news-card:first-child .news-image,
+            .news-image {
+                height: 200px;
+            }
+
+            .news-header {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .cta-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 450px) {
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .quick-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .quick-item {
+                border-right: 0;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stat,
+            .stat:nth-child(3) {
+                border-right: 0;
+                border-bottom: 1px solid rgba(255,255,255,.15);
+            }
+
+            .stat:last-child {
+                border-bottom: 0;
+            }
+
+            .event {
+                grid-template-columns: 60px 1fr;
+            }
+
+            .event-arrow {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ==========================================
+     TOP BAR
+========================================== -->
+
+<div class="topbar">
+    <div class="container topbar-inner">
+        <a href="#students">Current Students</a>
+        <a href="#faculty">Faculty & Staff</a>
+        <a href="#alumni">Alumni</a>
+        <a href="#contact">Contact</a>
+    </div>
+</div>
+
+
+<!-- ==========================================
+     HEADER
+========================================== -->
+
+<header>
+    <div class="container navbar">
+
+        <a href="#" class="brand">
+
+            <div class="brand-mark"></div>
+
+            <div class="brand-text">
+                BETHUNE-COOKMAN
+                <span>UNIVERSITY</span>
+            </div>
+
+        </a>
+
+        <nav>
+            <ul class="nav-links" id="navLinks">
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#academics">Academics</a>
+                </li>
+
+                <li>
+                    <a href="#admissions">Admissions</a>
+                </li>
+
+                <li>
+                    <a href="#campus">Campus Life</a>
+                </li>
+
+                <li>
+                    <a href="#news">News</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div class="nav-actions">
+
+            <a href="#admissions" class="apply-small">
+                Apply Now
+            </a>
+
+            <button
+                class="menu-btn"
+                id="menuBtn"
+                aria-label="Open navigation">
+                ☰
+            </button>
+
+        </div>
+
+    </div>
+</header>
+
+
+<main>
+
+<!-- ==========================================
+     HERO
+========================================== -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="hero-kicker">
+                Wildcat Nation
+            </div>
+
+            <h1>
+                Enter to <span>Learn.</span><br>
+                Depart to <span>Serve.</span>
+            </h1>
+
+            <p>
+                Discover an education built around purpose, leadership,
+                creativity and service. Find your path, develop your
+                potential and prepare to make an impact.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#admissions" class="btn btn-gold">
+                    Start Your Journey
+                </a>
+
+                <a href="#campus" class="btn btn-white">
+                    Visit Our Campus
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     QUICK LINKS
+========================================== -->
+
+<section class="quick-links">
+
+    <div class="container">
+
+        <div class="quick-grid">
+
+            <a href="#admissions" class="quick-item">
+                <strong>Apply Now</strong>
+                <span>Take the next step toward B-CU.</span>
+            </a>
+
+            <a href="#academics" class="quick-item">
+                <strong>Explore Academics</strong>
+                <span>Discover programs and areas of study.</span>
+            </a>
+
+            <a href="#campus" class="quick-item">
+                <strong>Visit Us</strong>
+                <span>Experience our historic campus.</span>
+            </a>
+
+            <a href="#giving" class="quick-item">
+                <strong>Give to B-CU</strong>
+                <span>Support students and the university.</span>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     ABOUT
+========================================== -->
+
+<section class="welcome" id="about">
+
+    <div class="container welcome-grid">
+
+        <div>
+
+            <div class="eyebrow">
+                Welcome to B-CU
+            </div>
+
+            <h2>
+                A legacy of learning, leadership and service.
+            </h2>
+
+            <p>
+                Bethune-Cookman University is a student-centered institution
+                where academic development, leadership and community
+                engagement come together.
+            </p>
+
+            <p>
+                Founded by Dr. Mary McLeod Bethune, the university continues
+                a tradition of preparing students to become responsible,
+                productive citizens and solution seekers.
+            </p>
+
+            <div class="quote">
+                "I leave you love. I leave you hope.
+                I leave you the challenge of developing confidence
+                in one another."
+
+                <small>
+                    Dr. Mary McLeod Bethune
+                </small>
+            </div>
+
+        </div>
+
+        <div class="campus-visual"></div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     ACADEMICS
+========================================== -->
+
+<section class="academics" id="academics">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="eyebrow">
+                Academic Excellence
+            </div>
+
+            <h2 class="section-title">
+                Find your path. Build your future.
+            </h2>
+
+            <p>
+                Explore academic communities designed to help students
+                develop knowledge, confidence and skills for an evolving
+                world.
+            </p>
+
+        </div>
+
+
+        <div class="academic-grid">
+
+            <article class="academic-card">
+
+                <div class="academic-icon">
+                    A
+                </div>
+
+                <h3>
+                    Arts & Humanities
+                </h3>
+
+                <p>
+                    Explore culture, communication, creative expression,
+                    history and the humanities.
+                </p>
+
+                <a href="#">
+                    Explore Programs →
+                </a>
+
+            </article>
+
+
+            <article class="academic-card">
+
+                <div class="academic-icon">
+                    B
+                </div>
+
+                <h3>
+                    Business & Entrepreneurship
+                </h3>
+
+                <p>
+                    Develop business knowledge, leadership skills and
+                    entrepreneurial thinking.
+                </p>
+
+                <a href="#">
+                    Explore Programs →
+                </a>
+
+            </article>
+
+
+            <article class="academic-card">
+
+                <div class="academic-icon">
+                    S
+                </div>
+
+                <h3>
+                    Sciences & Engineering
+                </h3>
+
+                <p>
+                    Discover opportunities in science, technology,
+                    mathematics and engineering.
+                </p>
+
+                <a href="#">
+                    Explore Programs →
+                </a>
+
+            </article>
+
+
+            <article class="academic-card">
+
+                <div class="academic-icon">
+                    N
+                </div>
+
+                <h3>
+                    Nursing & Health Sciences
+                </h3>
+
+                <p>
+                    Prepare for careers focused on wellness, healthcare,
+                    service and community impact.
+                </p>
+
+                <a href="#">
+                    Explore Programs →
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     STATS
+========================================== -->
+
+<section class="stats">
+
+    <div class="container stats-grid">
+
+        <div class="stat">
+            <strong>1904</strong>
+            <span>Founded with a vision for education</span>
+        </div>
+
+        <div class="stat">
+            <strong>4</strong>
+            <span>Academic colleges</span>
+        </div>
+
+        <div class="stat">
+            <strong>43+</strong>
+            <span>Degree programs and pathways</span>
+        </div>
+
+        <div class="stat">
+            <strong>∞</strong>
+            <span>Opportunities to make an impact</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     NEWS
+========================================== -->
+
+<section class="news" id="news">
+
+    <div class="container">
+
+        <div class="news-header">
+
+            <div class="section-heading" style="margin-bottom:0;">
+
+                <div class="eyebrow">
+                    B-CU News
+                </div>
+
+                <h2 class="section-title">
+                    What's happening at B-CU.
+                </h2>
+
+                <p>
+                    Discover stories, achievements and announcements
+                    from across the university community.
+                </p>
+
+            </div>
+
+            <a href="#" class="btn"
+               style="background:var(--maroon);color:#fff;">
+                View All News
+            </a>
+
+        </div>
+
+
+        <div class="news-grid">
+
+            <article class="news-card">
+
+                <div class="news-image">
+                    <span>
+                        Campus & Community
+                    </span>
+                </div>
+
+                <div class="news-body">
+
+                    <div class="news-date">
+                        Featured Story
+                    </div>
+
+                    <h3>
+                        Building opportunities for the next generation
+                        of leaders.
+                    </h3>
+
+                    <p>
+                        Explore the people, programs and experiences
+                        helping students prepare for the future.
+                    </p>
+
+                    <a href="#" class="read-more">
+                        Read Story →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <article class="news-card">
+
+                <div class="news-image">
+                    <span>
+                        Wildcats
+                    </span>
+                </div>
+
+                <div class="news-body">
+
+                    <div class="news-date">
+                        Student Life
+                    </div>
+
+                    <h3>
+                        Discover the Wildcat experience.
+                    </h3>
+
+                    <p>
+                        From organizations to athletics and campus events,
+                        there is always something happening.
+                    </p>
+
+                    <a href="#" class="read-more">
+                        Learn More →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <article class="news-card">
+
+                <div class="news-image">
+                    <span>
+                        Innovation
+                    </span>
+                </div>
+
+                <div class="news-body">
+
+                    <div class="news-date">
+                        Academics
+                    </div>
+
+                    <h3>
+                        Preparing students for tomorrow's opportunities.
+                    </h3>
+
+                    <p>
+                        Discover programs designed around knowledge,
+                        creativity and real-world experience.
+                    </p>
+
+                    <a href="#" class="read-more">
+                        Discover More →
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     EVENTS
+========================================== -->
+
+<section class="events" id="campus">
+
+    <div class="container event-grid">
+
+        <div>
+
+            <div class="eyebrow">
+                University Events
+            </div>
+
+            <h2 class="section-title">
+                Be part of the experience.
+            </h2>
+
+            <p style="color:var(--muted);font-size:17px;line-height:1.8;">
+                Connect with students, faculty, alumni and visitors
+                through events, athletics, academic activities and
+                campus experiences.
+            </p>
+
+            <br>
+
+            <a href="#" class="btn"
+               style="background:var(--maroon);color:#fff;">
+                View Calendar
+            </a>
+
+        </div>
+
+
+        <div class="event-list">
+
+            <article class="event">
+
+                <div class="event-date">
+                    <strong>26</strong>
+                    <span>SEP</span>
+                </div>
+
+                <div>
+                    <h3>
+                        Football vs. South Carolina State
+                    </h3>
+                    <p>
+                        Wildcat Stadium · Athletics
+                    </p>
+                </div>
+
+                <div class="event-arrow">
+                    →
+                </div>
+
+            </article>
+
+
+            <article class="event">
+
+                <div class="event-date">
+                    <strong>03</strong>
+                    <span>OCT</span>
+                </div>
+
+                <div>
+                    <h3>
+                        Football vs. Alabama State
+                    </h3>
+                    <p>
+                        Wildcat Stadium · Athletics
+                    </p>
+                </div>
+
+                <div class="event-arrow">
+                    →
+                </div>
+
+            </article>
+
+
+            <article class="event">
+
+                <div class="event-date">
+                    <strong>10</strong>
+                    <span>OCT</span>
+                </div>
+
+                <div>
+                    <h3>
+                        Football at Alabama A&M
+                    </h3>
+                    <p>
+                        Athletics · Away Game
+                    </p>
+                </div>
+
+                <div class="event-arrow">
+                    →
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     ADMISSIONS
+========================================== -->
+
+<section class="cta" id="admissions">
+
+    <div class="container cta-inner">
+
+        <div>
+
+            <h2>
+                Your next chapter starts here.
+            </h2>
+
+            <p>
+                Explore admissions, academic programs, campus life and
+                the many ways to become part of the Wildcat community.
+            </p>
+
+        </div>
+
+        <div class="hero-buttons">
+
+            <a href="#" class="btn btn-gold">
+                Apply Now
+            </a>
+
+            <a href="#" class="btn btn-white">
+                Request Information
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- ==========================================
+     FOOTER
+========================================== -->
+
+<footer id="contact">
+
+    <div class="container footer-grid">
+
+        <div class="footer-brand">
+
+            <h3>
+                Bethune-Cookman University
+            </h3>
+
+            <p>
+                Enter to Learn. Depart to Serve.
+                A university community dedicated to learning,
+                leadership, service and opportunity.
+            </p>
+
+            <p style="margin-top:15px;">
+                640 Dr. Mary McLeod Bethune Boulevard<br>
+                Daytona Beach, FL 32114
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <div class="footer-title">
+                Explore
+            </div>
+
+            <ul class="footer-links">
+                <li><a href="#about">About B-CU</a></li>
+                <li><a href="#academics">Academics</a></li>
+                <li><a href="#campus">Campus Life</a></li>
+                <li><a href="#news">News</a></li>
+            </ul>
+
+        </div>
+
+
+        <div>
+
+            <div class="footer-title">
+                Admissions
+            </div>
+
+            <ul class="footer-links">
+                <li><a href="#admissions">Apply Now</a></li>
+                <li><a href="#">Undergraduate</a></li>
+                <li><a href="#">Graduate</a></li>
+                <li><a href="#">Financial Aid</a></li>
+            </ul>
+
+        </div>
+
+
+        <div>
+
+            <div class="footer-title">
+                Connect
+            </div>
+
+            <ul class="footer-links">
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Visit Campus</a></li>
+                <li><a href="#">Alumni</a></li>
+                <li><a href="#">Give to B-CU</a></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+        <span>
+            © 2026 Bethune-Cookman University. All rights reserved.
+        </span>
+
+        <span>
+            Privacy · Accessibility · Equal Opportunity
+        </span>
+
+    </div>
+
+</footer>
+
+
+<!-- ==========================================
+     JAVASCRIPT
+========================================== -->
+
+<script>
+
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", function () {
+
+        navLinks.classList.toggle("active");
+
+        if (navLinks.classList.contains("active")) {
+            menuBtn.textContent = "✕";
+        } else {
+            menuBtn.textContent = "☰";
+        }
+
+    });
+
+
+    document.querySelectorAll(".nav-links a").forEach(function(link) {
+
+        link.addEventListener("click", function() {
+
+            navLinks.classList.remove("active");
+            menuBtn.textContent = "☰";
+
+        });
+
+    });
+
+
+    /* Scroll reveal */
+
+    const revealElements = document.querySelectorAll(
+        ".quick-item, .academic-card, .news-card, .event, .stat, .welcome-grid"
+    );
+
+    const revealObserver = new IntersectionObserver(
+        function(entries) {
+
+            entries.forEach(function(entry) {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+
+                    revealObserver.unobserve(entry.target);
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.12
+        }
+    );
+
+
+    revealElements.forEach(function(element) {
+
+        element.style.opacity = "0";
+        element.style.transform = "translateY(25px)";
+        element.style.transition =
+            "opacity .7s ease, transform .7s ease";
+
+        revealObserver.observe(element);
+
+    });
+
+
+    /* Close menu when clicking outside */
+
+    document.addEventListener("click", function(event) {
+
+        if (
+            !event.target.closest(".navbar") &&
+            navLinks.classList.contains("active")
+        ) {
+            navLinks.classList.remove("active");
+            menuBtn.textContent = "☰";
+        }
+
+    });
+
+</script>
+
+</body>
+</html>
+```
